@@ -27,3 +27,4 @@ To run the test script, you need to have the following software installed on you
 
 ### Running the Tests
 1. To run the test script, navigate to the project directory in your terminal and execute the following command:
+"# OptimyTest" 

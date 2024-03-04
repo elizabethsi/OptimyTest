@@ -1,0 +1,706 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.11.4 on win32)" generated="2024-03-05T07:06:37.045427" rpa="false" schemaversion="5">
+<suite id="s1" name="Optimy Test" source="C:\Users\eliza\OneDrive\Desktop\Optimy\Optimy_Test.robot">
+<test id="s1-t1" name="Submit Application Test" line="5">
+<kw name="Given User goes to the application website" owner="Optimy_Keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:37.191996" level="INFO">Opening browser 'Chrome' to base url 'https://qrqck8u5t9co.front.staging.optimy.net/en/'.</msg>
+<arg>${URL}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-05T07:06:37.191996" elapsed="4.327406"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-05T07:06:41.519402" elapsed="0.115324"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:41.634726" level="INFO">Clicking button 'css:button[id='cookie-close']'.</msg>
+<arg>${closeBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:41.634726" elapsed="0.034635"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:41.670362" level="INFO">Clicking element 'css:.ml-auto.btn.btn-outline-primary[href="/en/user/login/"]'.</msg>
+<arg>${loginBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:41.669361" elapsed="2.357751"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:37.191996" elapsed="6.835116"/>
+</kw>
+<kw name="And User logs in with credentials" owner="Optimy_Keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:44.027112" level="INFO">Typing text 'optimyautomationtester@gmail.com' into text field 'css:input[name='email']'.</msg>
+<arg>css:input[name='email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:44.027112" elapsed="0.086009"/>
+</kw>
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:44.113121" level="INFO">Typing password into text field 'css:input[name='password']'.</msg>
+<msg time="2024-03-05T07:06:44.132628" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>css:input[name='password']</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:44.113121" elapsed="0.047753"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:44.161874" level="INFO">Clicking button 'css:button[type='submit']'.</msg>
+<arg>css:button[type='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:44.160874" elapsed="1.641486"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:44.027112" elapsed="1.775248"/>
+</kw>
+<kw name="When User submits a new application" owner="Optimy_Keywords">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:45.803360" level="INFO">Clicking element 'css:.btn.btn-primary.btn-lg.col-md-auto[href="project/new/"]'.</msg>
+<arg>${submitApp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:45.802360" elapsed="2.726734"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:48.529094" level="INFO">Clicking element 'css:a.btn.btn-outline-primary[href^="/en/project/new/controller.php"]'.</msg>
+<arg>${submitBtn}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:48.529094" elapsed="2.686204"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:45.802360" elapsed="5.412938"/>
+</kw>
+<kw name="And User fills out the forms" owner="Optimy_Keywords">
+<kw name="Input First Name" owner="Optimy_PageObjects">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:51.216299" level="INFO">Typing text 'Jane' into text field 'css:input[aria-label="First name"]'.</msg>
+<arg>${firstName}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:51.216299" elapsed="0.044532"/>
+</kw>
+<arg>${firstNameValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:51.216299" elapsed="0.044532"/>
+</kw>
+<kw name="Input Last Name" owner="Optimy_PageObjects">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:51.260831" level="INFO">Typing text 'Doe' into text field 'css:input[aria-label="Last name"]'.</msg>
+<arg>${lastName}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:51.260831" elapsed="0.051424"/>
+</kw>
+<arg>${lastNameValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:51.260831" elapsed="0.051424"/>
+</kw>
+<kw name="Input Address" owner="Optimy_PageObjects">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:51.313255" level="INFO">Typing text '123 Test St, Quezon City' into text field 'css:textarea[aria-label="Unit no/House no, Street"]'.</msg>
+<arg>${address}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:51.313255" elapsed="0.068444"/>
+</kw>
+<arg>${addressValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:51.313255" elapsed="0.068444"/>
+</kw>
+<kw name="Input Postal Code" owner="Optimy_PageObjects">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:51.382699" level="INFO">Typing text '1000' into text field 'css:input[aria-label="Select postal code"]'.</msg>
+<arg>${postCode}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:51.382699" elapsed="0.047262"/>
+</kw>
+<arg>${postCodeValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:51.382699" elapsed="0.047262"/>
+</kw>
+<kw name="Select Country" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${postCountry}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:51.430463" elapsed="0.627516"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.058979" level="INFO">Clicking element 'css=a#ui-id-2.ui-menu-item-wrapper'.</msg>
+<arg>${postCountry}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.057979" elapsed="0.023681"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.081660" level="INFO">Selecting options from selection list 'css:select[aria-label="Country"]' by label Philippines.</msg>
+<arg>${country}</arg>
+<arg>${text}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.081660" elapsed="0.043879"/>
+</kw>
+<arg>${countryValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:51.430463" elapsed="0.695076"/>
+</kw>
+<kw name="Choose File" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.126042" level="INFO">Sending C:\Users\eliza\OneDrive\Desktop\Optimy\JaneDoe.jpg to browser.</msg>
+<arg>${browseFile}</arg>
+<arg>${filePath}</arg>
+<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.125539" elapsed="0.022696"/>
+</kw>
+<kw name="Choose Gender" owner="Optimy_PageObjects">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.149236" level="INFO">Clicking element 'css:label[aria-label="Female"]'.</msg>
+<arg>${genderLoc}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.148235" elapsed="0.028011"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:52.148235" elapsed="0.028011"/>
+</kw>
+<kw name="Select Role" owner="Optimy_PageObjects">
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.176246" level="INFO">Selecting options from selection list 'css:select[aria-label="Select a role you're applying for"]' by label Automation tester.</msg>
+<arg>${roleDropdown}</arg>
+<arg>${text}</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.176246" elapsed="0.041661"/>
+</kw>
+<arg>${roleValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:52.176246" elapsed="0.041661"/>
+</kw>
+<kw name="Select Tools" owner="Optimy_PageObjects">
+<for flavor="IN">
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.219120" level="INFO">Clicking element 'css:label[aria-label="Spreadsheet"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.219120" elapsed="0.028145"/>
+</kw>
+<var name="${label}">Spreadsheet</var>
+<status status="PASS" start="2024-03-05T07:06:52.219120" elapsed="0.028145"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.247265" level="INFO">Clicking element 'css:label[aria-label="JIRA"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.247265" elapsed="0.029219"/>
+</kw>
+<var name="${label}">JIRA</var>
+<status status="PASS" start="2024-03-05T07:06:52.247265" elapsed="0.029219"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.276484" level="INFO">Clicking element 'css:label[aria-label="Test management tool (any)"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.276484" elapsed="0.028948"/>
+</kw>
+<var name="${label}">Test management tool (any)</var>
+<status status="PASS" start="2024-03-05T07:06:52.276484" elapsed="0.028948"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.305432" level="INFO">Clicking element 'css:label[aria-label="SQL, MySQL, MySQLi"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.305432" elapsed="0.029053"/>
+</kw>
+<var name="${label}">SQL, MySQL, MySQLi</var>
+<status status="PASS" start="2024-03-05T07:06:52.305432" elapsed="0.029053"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.334485" level="INFO">Clicking element 'css:label[aria-label="Javascript"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.334485" elapsed="0.029039"/>
+</kw>
+<var name="${label}">Javascript</var>
+<status status="PASS" start="2024-03-05T07:06:52.334485" elapsed="0.029039"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.363524" level="INFO">Clicking element 'css:label[aria-label="Python"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.363524" elapsed="0.029925"/>
+</kw>
+<var name="${label}">Python</var>
+<status status="PASS" start="2024-03-05T07:06:52.363524" elapsed="0.029925"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.394449" level="INFO">Clicking element 'css:label[aria-label="Robot Framework"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.393449" elapsed="0.028142"/>
+</kw>
+<var name="${label}">Robot Framework</var>
+<status status="PASS" start="2024-03-05T07:06:52.393449" elapsed="0.028142"/>
+</iter>
+<iter>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.422592" level="INFO">Clicking element 'css:label[aria-label="Cypress"]'.</msg>
+<arg>css:label[aria-label="${label}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.421591" elapsed="0.030722"/>
+</kw>
+<var name="${label}">Cypress</var>
+<status status="PASS" start="2024-03-05T07:06:52.421591" elapsed="0.030722"/>
+</iter>
+<var>${label}</var>
+<value>@{labels}</value>
+<status status="PASS" start="2024-03-05T07:06:52.219120" elapsed="0.233193"/>
+</for>
+<status status="PASS" start="2024-03-05T07:06:52.217907" elapsed="0.234406"/>
+</kw>
+<kw name="Input Career Objective" owner="Optimy_PageObjects">
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.452313" level="INFO">Executing JavaScript:
+document.querySelector('textarea[aria-label="What is your career objective?"]').style.visibility = 'visible';
+Without any arguments.</msg>
+<arg>document.querySelector('textarea[aria-label="What is your career objective?"]').style.visibility = 'visible';</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.452313" elapsed="0.004170"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${careerObjField}</arg>
+<arg>timeout=20s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.456483" elapsed="0.007003"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.463988" level="INFO">Typing text 'World domination' into text field 'css:textarea[aria-label="What is your career objective?"]'.</msg>
+<arg>${careerObjField}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.463486" elapsed="0.070271"/>
+</kw>
+<arg>${careerObjValue}</arg>
+<status status="PASS" start="2024-03-05T07:06:52.452313" elapsed="0.081444"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:51.216299" elapsed="1.317458"/>
+</kw>
+<kw name="And User clicks Next screen button" owner="Optimy_Keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:52.534757" level="INFO">Clicking button 'css:button[id="navButtonNext"]'.</msg>
+<arg>${nextScreenBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.534757" elapsed="0.037854"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:52.533757" elapsed="0.038854"/>
+</kw>
+<kw name="Then User verifies all inputted values in the Summary screen" owner="Optimy_Keywords">
+<kw name="Verify Personal Details" owner="Optimy_PageObjects">
+<kw name="Verify First Name" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${First_Name_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:52.573612" elapsed="4.335717"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:56.919371" level="INFO">${first_name} = Jane</msg>
+<var>${first_name}</var>
+<arg>${First_Name_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.909329" elapsed="0.010042"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${first_name}</arg>
+<arg>${firstNameValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.919371" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:52.573612" elapsed="4.345759"/>
+</kw>
+<kw name="Verify Last Name" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Last_Name_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.920371" elapsed="0.009506"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:56.936905" level="INFO">${last_name} = Doe</msg>
+<var>${last_name}</var>
+<arg>${Last_Name_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.929877" elapsed="0.007028"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${last_name}</arg>
+<arg>${lastNameValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.936905" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:56.919371" elapsed="0.017534"/>
+</kw>
+<kw name="Verify Address" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Address_Selector}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.937906" elapsed="0.009505"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:56.954413" level="INFO">${address} = 123 Test St, Quezon City</msg>
+<var>${address}</var>
+<arg>${Address_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.947411" elapsed="0.007002"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${address}</arg>
+<arg>${addressValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.954916" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:56.936905" elapsed="0.018011"/>
+</kw>
+<kw name="Verify Postal Code" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Postal_Code_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.954916" elapsed="0.010003"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:56.971424" level="INFO">${postal_code} = 1000</msg>
+<var>${postal_code}</var>
+<arg>${Postal_Code_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.964919" elapsed="0.006505"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${postal_code}</arg>
+<arg>${postCodeValue}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.971424" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:56.954916" elapsed="0.017508"/>
+</kw>
+<kw name="Verify Country" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Country_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.972424" elapsed="0.010050"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:56.988979" level="INFO">${country} = Philippines</msg>
+<var>${country}</var>
+<arg>${Country_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.982474" elapsed="0.006505"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${country}</arg>
+<arg>${countryValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.988979" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:56.972424" elapsed="0.017556"/>
+</kw>
+<kw name="Verify File Name" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${File_Name_Selector}</arg>
+<arg>timeout=30s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:56.989980" elapsed="0.010204"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-03-05T07:06:57.000184" level="INFO">${escaped_filePath} = C:\Users\eliza\OneDrive\Desktop\Optimy\JaneDoe.jpg</msg>
+<var>${escaped_filePath}</var>
+<arg>${filePath.replace('/', '\\/')}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.000184" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-03-05T07:06:57.001183" level="INFO">Escaped File Path: C:\Users\eliza\OneDrive\Desktop\Optimy\JaneDoe.jpg</msg>
+<arg>Escaped File Path: ${escaped_filePath}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.000184" elapsed="0.000999"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${filePath}</arg>
+<arg>${escaped_filePath}</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.001183" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:56.989980" elapsed="0.011203"/>
+</kw>
+<kw name="Verify Gender" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Gender_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.001183" elapsed="0.010053"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.018353" level="INFO">${gender} = Female</msg>
+<var>${gender}</var>
+<arg>${Gender_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.011236" elapsed="0.007117"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${gender}</arg>
+<arg>${genderValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.018353" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:57.001183" elapsed="0.018170"/>
+</kw>
+<kw name="Verify Role" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Role_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.019353" elapsed="0.009506"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.037366" level="INFO">${role} = Automation tester</msg>
+<var>${role}</var>
+<arg>${Role_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.028859" elapsed="0.008507"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${role}</arg>
+<arg>${roleValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.037366" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:57.019353" elapsed="0.018013"/>
+</kw>
+<kw name="Verify Tool Familiarity" owner="Optimy_PageObjects">
+<kw name="Get WebElements" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.043368" level="INFO">${tools_elements} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.307")&gt;, &lt;selenium.webdri...</msg>
+<var>${tools_elements}</var>
+<arg>${Tools_Selector}</arg>
+<doc>Returns a list of WebElement objects matching the ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.038367" elapsed="0.005001"/>
+</kw>
+<kw name="Create List" owner="BuiltIn">
+<msg time="2024-03-05T07:06:57.044368" level="INFO">${tools_texts} = []</msg>
+<var>${tools_texts}</var>
+<doc>Returns a list containing given items.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.044368" elapsed="0.000000"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.048873" level="INFO">${text} = Spreadsheet</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.044368" elapsed="0.004505"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.048873" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.307")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.044368" elapsed="0.004505"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.052873" level="INFO">${text} = JIRA</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.048873" elapsed="0.004000"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.052873" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.308")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.048873" elapsed="0.004000"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.055874" level="INFO">${text} = Test management tool (any)</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.052873" elapsed="0.004001"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.056874" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.295")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.052873" elapsed="0.004001"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.060380" level="INFO">${text} = SQL, MySQL, MySQLi</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.056874" elapsed="0.003506"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.060380" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.309")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.056874" elapsed="0.003506"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.064380" level="INFO">${text} = Javascript</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.060380" elapsed="0.004000"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.064380" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.310")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.060380" elapsed="0.004000"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.069030" level="INFO">${text} = Python</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.065380" elapsed="0.003650"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.069030" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.311")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.064380" elapsed="0.004650"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.073032" level="INFO">${text} = Robot Framework</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.069030" elapsed="0.004002"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.073032" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.312")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.069030" elapsed="0.004002"/>
+</iter>
+<iter>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.077033" level="INFO">${text} = Cypress</msg>
+<var>${text}</var>
+<arg>${element}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.073032" elapsed="0.004001"/>
+</kw>
+<kw name="Append To List" owner="Collections">
+<arg>${tools_texts}</arg>
+<arg>${text}</arg>
+<doc>Adds ``values`` to the end of ``list``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.077033" elapsed="0.000000"/>
+</kw>
+<var name="${element}">&lt;selenium.webdriver.remote.webelement.WebElement (session="0343d2747b78511ea9dfdbcea0372cd4", element="f.ABE7B269E6BF2060C5F911DC70CEB2FE.d.608E99562F081705465FE82F299403FB.e.313")&gt;</var>
+<status status="PASS" start="2024-03-05T07:06:57.073032" elapsed="0.004001"/>
+</iter>
+<var>${element}</var>
+<value>@{tools_elements}</value>
+<status status="PASS" start="2024-03-05T07:06:57.044368" elapsed="0.032665"/>
+</for>
+<kw name="Lists Should Be Equal" owner="Collections">
+<msg time="2024-03-05T07:06:57.077033" level="INFO">False</msg>
+<arg>${tools_texts}</arg>
+<arg>${labels}</arg>
+<doc>Fails if given lists are unequal.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.077033" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:57.038367" elapsed="0.038666"/>
+</kw>
+<kw name="Verify Career Objective" owner="Optimy_PageObjects">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${Career_Objective_Selector}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.078033" elapsed="0.010028"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.094565" level="INFO">${career_obj} = World domination</msg>
+<var>${career_obj}</var>
+<arg>${Career_Objective_Selector}</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.088061" elapsed="0.006504"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<arg>${career_obj}</arg>
+<arg>${careerObjValue}</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.094565" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:57.078033" elapsed="0.016532"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:52.573612" elapsed="4.521954"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:06:57.095566" level="INFO">Clicking button 'css:button#submitButton.btn.btn-primary.ml-md-auto[type="submit"]'.</msg>
+<arg>${validateSendBtn}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.095566" elapsed="0.031604"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:52.572611" elapsed="4.554559"/>
+</kw>
+<kw name="And User verifies redirection to Thank you page" owner="Optimy_Keywords">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${thankYouMessage}</arg>
+<arg>timeout=15s</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-05T07:06:57.127170" elapsed="3.552518"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-03-05T07:07:00.687210" level="INFO">${heading_text} = Thank you for submitting your project</msg>
+<var>${heading_text}</var>
+<arg>css:h1.h1.text-center</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-05T07:07:00.679688" elapsed="0.007522"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${heading_text}</arg>
+<arg>Thank you for submitting your project</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2024-03-05T07:07:00.687210" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:57.127170" elapsed="3.560040"/>
+</kw>
+<status status="PASS" start="2024-03-05T07:06:37.190996" elapsed="23.497215"/>
+</test>
+<status status="PASS" start="2024-03-05T07:06:37.046427" elapsed="23.641784"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Optimy Test">Optimy Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

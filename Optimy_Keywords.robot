@@ -10,12 +10,12 @@ Resource   Optimy_PageObjects.robot
 ${browser}          Chrome
 ${email}            optimyautomationtester@gmail.com
 ${password}         2MsWseoj
-${filePath}         C:\\Users\\eliza\\OneDrive\\Desktop\\Automation Assessment\\JaneDoe.jpg
 ${firstNameValue}        Jane
 ${lastNameValue}         Doe
 ${addressValue}          123 Test St, Quezon City
 ${postCodeValue}         1000
 ${countryValue}          Philippines
+${filePath}    ${CURDIR}${/}JaneDoe.jpg
 ${genderValue}           Female
 ${roleValue}             Automation tester
 ${careerObjValue}        World domination
@@ -54,7 +54,7 @@ User clicks Next screen button
 
 User verifies all inputted values in the Summary screen
     Verify Personal Details
-    Click Button    ${${validateSendBtn}
+    Click Button    ${validateSendBtn}
 
 User verifies redirection to Thank you page
     Wait Until Page Contains Element    ${thankYouMessage}      timeout=15s
